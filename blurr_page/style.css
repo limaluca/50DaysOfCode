@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubunto');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+.background {
+    background: url('https://figopetinsurance.com/sites/default/files/imagedogsoutdoors-dog-white-pit-bull-pure-bredblog.jpg') no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(0px);
+    z-index: -1;
+}
+
+.loading-text {
+    font-size: 50px;
+    color: white;
+}
