@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right top, #935527, #a15e29, #af672b, #bd702d, #cb792f, #d07f2f, #d6842f, #db8a2f, #d98d2e, #d7902d, #d5932c, #d3962c);
+    background-image: linear-gradient(to right top, #392d1c, #533d1d, #6f4e1c, #8d5e1b, #ad6f18, #ae7018, #b07118, #b17218, #94641b, #79551d, #60461e, #48381e);
     ;
     overflow-x: hidden;
     width: 100vw;

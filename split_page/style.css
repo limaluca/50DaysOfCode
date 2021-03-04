@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-button-bg: rgba(87, 84, 236);
+    --right-button-bg: rgba(28, 122, 28, 1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: darkgray;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: url('ps.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.split.right {
+    right: 0;
+    background: url('xbox.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.split.left::before {
+    content: '';
+    background-color: var(--left-bg-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.split.right::before {
+    content: '';
+    background-color: var(--right-bg-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container h1 {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 4rem;
+    white-space: nowrap;
+}
+
+.button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: white 2px solid;
+    text-decoration: none;
+    padding: 1.5rem;
+    color: white;
+    transform: translateX(-50%);
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border .1s ease-in-out;
+    text-transform: uppercase;
+    /* to keep the always on the middle*/
+}
+
+.split.left .button:hover {
+    background: var(--left-button-bg);
+    border-color: var(--left-button-bg);
+}
+
+.split.right .button:hover {
+    background: var(--right-button-bg);
+    border-color: var(--right-button-bg);
+}
