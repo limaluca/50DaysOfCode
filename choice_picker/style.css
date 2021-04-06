@@ -21,7 +21,7 @@ h3 {
 }
 
 .container {
-    max-width: 600px;
+    width: 400px;
 }
 
 textarea {
