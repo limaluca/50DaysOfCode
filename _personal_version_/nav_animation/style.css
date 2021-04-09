@@ -16,8 +16,8 @@
         
         nav {
             background-color: white;
-            width: 80px;
-            padding: 20px;
+            width: 160px;
+            padding: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,9 +44,14 @@
         }
         
         nav ul li {
-            opacity: 0;
             transform: translateY(0deg);
             transition: opacity 0.5s linear, transform 0.5s linear;
+            font-size: 16px;
+            opacity: 0;
+        }
+        
+        nav ul li:hover {
+            color: rgb(117, 94, 77);
         }
         
         nav.active ul li {
