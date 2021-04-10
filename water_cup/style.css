@@ -45,7 +45,7 @@ h3 {
     height: 95px;
     width: 50px;
     border-radius: 0 0 15px 15px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     font-size: 14px;
     align-items: center;
@@ -81,17 +81,17 @@ width makes the items on the flex jump lines */
 }
 
 .remained span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .remained small {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .percentage {
-    color: var(--fill-color);
-    font-size: 30px;
+    background-color: var(--fill-color);
+    font-size: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
