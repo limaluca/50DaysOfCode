@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dancing Script', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.color {
+    background-color: grey;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.color:nth-child(1) {
+    background-color: darkred;
+}
+
+.color:nth-child(2) {
+    background-color: rosybrown;
+}
+
+.color:nth-child(3) {
+    background-color: lightpink;
+}
+
+.color:nth-child(4) {
+    background-color: burlywood;
+}
+
+.color:nth-child(5) {
+    background-color: darkkhaki;
+}
+
+.hex {
+    font-size: 18px;
+    font-family: 'Quicksand';
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    transition: 0.1s linear;
+}
+
+.hex:hover {
+    transform: scale(1.06);
+}
+
+.instruction {
+    position: absolute;
+    width: 18%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 100;
+    visibility: hidden;
+}
