@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <title>:: Kanban Board ::</title>
+</head>
+
+<body>
+    <h2>Desenvolvimento</h2>
+    <p class="instructions">Para movimentar as demandas de acordo <br> com seu status, basta arrastá-las :)</p>
+    <div class="board">
+        <div class="todo column">
+
+            <h3 class="status">Pendente</h3>
+
+            <div class="task" draggable="true">
+                <div class="tag backend">Back-end</div>
+                <p>Trabalhar nos novos relacionamentos entre entidades do banco de dados.</p>
+            </div>
+
+            <div class="task" draggable="true">
+                <div class="tag devops">DevOps</div>
+                <p>Implementação do sistema de verificação em dois fatores para login dos administradores</p>
+            </div>
+
+        </div>
+
+        <div class="wip column ">
+            <h3 class="status">Em andamento</h3>
+
+
+            <div class="task" draggable="true">
+                <div class="tag frontend">Front-End</div>
+                <p>Finalização da nova landing page</p>
+            </div>
+
+        </div>
+
+        <div class="done column">
+            <h3 class="status">Feito</h3>
+
+
+            <div class="task" draggable="true">
+                <div class="tag backend">Back-end</div>
+                <p>Refatoramento utilizando ultima atualização de API Restfull</p>
+            </div>
+            <div class="task" draggable="true">
+                <div class="tag design">Design</div>
+                <p>Desenvolvimento do novo logo da empresa juntando nos novos elementos da ultima reunião</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script src="scripts.js "></script>
+
+</html>

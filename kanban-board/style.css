@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.5)
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flexbox;
+    height: 100vh;
+    overflow: hidden;
+    background-color: saddlebrown;
+}
+
+body h2 {
+    margin: 1rem;
+    color: white
+}
+
+.instructions {
+    color: white;
+    position: absolute;
+    top: 1px;
+    right: 52%;
+}
+
+.board {
+    display: flex;
+    margin: 0 1rem;
+    flex-direction: row;
+}
+
+.column {
+    background-color: tan;
+    box-shadow: var(--shadow);
+    width: 33%;
+    height: 88vh;
+    margin: 8px;
+    border-top: none;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status {
+    padding: 8px;
+    background-color: rgba(47, 79, 79, 0.609);
+    color: white;
+    margin: 0;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.task {
+    width: 90%;
+    height: 24vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow);
+    margin-top: 1.5rem;
+    transition: all 1s ease-out;
+}
+
+.task p {
+    padding: 2px;
+    margin: 0;
+}
+
+.terminado {
+    background-color: aqua;
+}
+
+.tag {
+    width: 18vw;
+    height: 20%;
+    background-color: white;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: translateY(-12px);
+    /* transform: rotate(-90deg) translateX(55px) translateY(50px); */
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 40px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    margin-bottom: 20px;
+    font: 16px 'Muli', sans-serif;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    display: block;
+}
+
+.frontend {
+    background-color: palevioletred;
+}
+
+.backend {
+    background-color: darkslateblue;
+}
+
+.devops {
+    background-color: lightslategrey;
+}
+
+.design {
+    background-color: mediumpurple;
+}
