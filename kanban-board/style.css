@@ -26,6 +26,7 @@ body h2 {
     position: absolute;
     top: 1px;
     right: 52%;
+    visibility: hidden;
 }
 
 .board {
@@ -39,6 +40,14 @@ body h2 {
     box-shadow: var(--shadow);
     width: 33%;
     height: 88vh;
+    margin: 8px;
+    border-top: none;
+    border-bottom: none;
+}
+
+.tasks {
+    width: 30vw;
+    height: 88%;
     margin: 8px;
     border-top: none;
     border-bottom: none;
@@ -85,7 +94,7 @@ body h2 {
     color: white;
     text-transform: uppercase;
     text-align: left;
-    line-height: 40px;
+    line-height: 30px;
 }
 
 textarea {
@@ -114,4 +123,54 @@ textarea {
 
 .design {
     background-color: mediumpurple;
+}
+
+@media only screen and (max-width:600px) {
+    body h2 {
+        text-align: center;
+        font-size: 16px;
+        margin: 0.1rem 0;
+    }
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 100%;
+        height: 30vh;
+        flex-direction: column;
+        margin-top: 0.2rem;
+        transition: flex-direction 0.9s ease;
+    }
+    .status {
+        padding: 0;
+        font-size: 14px;
+    }
+    .tasks {
+        display: flex;
+        flex-direction: row;
+        height: 90%;
+        width: 90vw;
+        margin: 0;
+    }
+    .task {
+        margin-top: 1rem;
+        margin-left: 0.3rem;
+        height: 80%;
+        width: 28vw;
+        position: relative;
+    }
+    .task p {
+        position: absolute;
+        top: 14px;
+        font-size: 10px;
+        padding: 8px 2px;
+        line-height: 12px;
+        text-align: left;
+    }
+    .tag {
+        width: 20vw;
+        font-size: 10px;
+        line-height: 35px;
+    }
 }

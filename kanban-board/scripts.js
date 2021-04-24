@@ -2,7 +2,8 @@
 const tasks = document.querySelectorAll(".task");
 
 //Getting the items that will be the "drop zone"
-const columns = document.querySelectorAll(".column");
+const dropZones = document.querySelectorAll(".tasks");
+
 
 
 //Those will be fired for the draggable items
@@ -13,8 +14,7 @@ tasks.forEach(task => {
 });
 
 function dragStart() {
-    console.log("drag start")
-        // This class is added so we know which of the item is being dragged individually
+    // This class is added so we know which of the item is being dragged individually
     this.classList.add("is-dragging")
 }
 
@@ -26,7 +26,7 @@ function dragEnd() {
 }
 
 //Those will be fired when the item begins to be dragged 
-columns.forEach(column => {
+dropZones.forEach(column => {
     column.addEventListener("dragenter", dragEnter)
     column.addEventListener("dragover", dragOver)
     column.addEventListener("dragleave", dragLeave)
