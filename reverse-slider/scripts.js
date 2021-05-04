@@ -1,13 +1,39 @@
-const nav = document.querySelector(".nav")
+const sliderContainer = document.querySelector(".slider-container")
+const upButton = document.querySelector(".up-button");
+const downButton = document.querySelector(".down-button");
+const slideLeft = document.querySelector(".left-slide");
+const slideRight = document.querySelector(".right-slide");
+const slidesLength = slideLeft.querySelectorAll("div").length;
+let activeSlide = 0;
 
-window.addEventListener("scroll", fixNav);
 
-function fixNav() {
-    const delayActive = 250; //this will make the active class addition to be delayed
-    if (window.scrollY > nav.offsetHeight + delayActive) {
-        nav.classList.add("active");
+slideLeft.style.top = `-${(slidesLength-1)* 100}vh`
 
-    } else {
-        nav.classList.remove("active");
+
+upButton.addEventListener("click", () => changeSlide("up"))
+downButton.addEventListener("click", () => changeSlide("down"))
+
+const changeSlide = (direction) => {
+    const sliderHeight = sliderContainer.clientHeight;
+    if (direction === "up") {
+        activeSlide++
+        if (activeSlide > slidesLength - 1) {
+            activeSlide = 0;
+
+        }
+    } else if (direction === "down") {
+        activeSlide--
+        if (activeSlide < 0) {
+            activeSlide = 3;
+
+
+        }
     }
+
+
+    slideRight.style.transform = `translateY(-${activeSlide*sliderHeight}px)`
+    slideLeft.style.transform = `translateY(${activeSlide*sliderHeight}px)`
+
+
+
 }
