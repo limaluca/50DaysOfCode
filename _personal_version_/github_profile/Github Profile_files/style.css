@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right top, #987e6b, #8a6d57, #7d5d43, #6e4d30, #603e1d);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.form {
+    background-color: #FBEEE6;
+    width: 30rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.search {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    padding: 1rem;
+    background-color: #FBEEE6;
+}
+
+.search:focus {
+    outline: none;
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 0 0 8px 4px rgb(184, 149, 124);
+    color: #6e4d30;
+}
+
+.card {
+    color: #6e4d30;
+    margin: 2rem 0;
+    display: flex;
+    width: 36rem;
+    height: 16rem;
+    background-color: #FBEEE6;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    box-shadow: inset 0 0 1em rgba(184, 149, 124, 0.5), 0 0 1em rgb(184, 149, 124);
+}
+
+.avatar {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(184, 149, 124, 0.5);
+}
+
+.user-card {
+    margin: 0 2rem;
+}
+
+.user-card p {
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 0.5rem;
+}
+
+.user-card ul {
+    list-style: none;
+    display: flex;
+    margin: 1rem 0;
+    font-size: 14px;
+}
+
+.user-card ul li {
+    margin: 0 0.3rem;
+}
+
+.error-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-card img {
+    width: 20%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+
+.error-card h2 {
+    color: #6e4d30;
+}
+
+#repos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#repos a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    background-color: rgb(184, 149, 124);
+    padding: 0.3rem;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+#repos a:hover {
+    color: #6e4d30;
+}
+
+@media (max-width: 500px) {
+    body {
+        background-image: linear-gradient(to right top, #6e4d30, #6e4d30, #6e4d30, #6e4d30, #6e4d30);
+    }
+    .form {
+        width: 50%;
+    }
+    .user-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .user-card p {
+        margin-top: 4px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        font-style: italic;
+    }
+    .user-card ul {
+        font-size: 12px;
+    }
+    .user-card ul li {
+        margin: 0.2rem;
+    }
+    .repos {
+        justify-content: center;
+    }
+    .repos a {
+        font-size: 13px;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+        width: 22rem;
+        height: 28rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+    }
+}
