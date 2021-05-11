@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: gainsboro;
+    --secondary-color: whitesmoke;
+    --shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to left top, #8a714d, #7a6143, #6a5239, #59432f, #493526);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* persperctive and transform-style on the whole card work together */
+    perspective: 1000px;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    min-height: 30rem;
+    box-shadow: var(--shadow), 0 0 50px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: whitesmoke;
+    transform-style: preserve-3d;
+}
+
+.card-image {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ballons {
+    min-height: 2rem;
+    width: 8rem;
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 2rem
+}
+
+.card-image img {
+    width: 10rem;
+    z-index: 2;
+    transition: transform 0.4s ease-in-out;
+}
+
+.circle {
+    width: 13rem;
+    height: 13rem;
+    background-image: linear-gradient(to left top, #8a714d, #7a6143, #6a5239, #59432f, #493526);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: transform 0.4s ease-in-out;
+}
+
+.author {
+    margin-top: 0.5rem;
+    width: 60%;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.author img {
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.author-info {
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.author-info strong {
+    font-size: 14px;
+}
+
+.author-info small {
+    font-size: 12px;
+    color: #777;
+}
+
+.ballons {
+    animation: waving 1s linear forwards infinite;
+}
+
+@keyframes waving {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(30deg)
+    }
+    50% {
+        transform: rotate(0deg)
+    }
+    75% {
+        transform: rotate(-30deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .container {
+        width: 280px;
+    }
+    .card {
+        max-height: 10vh;
+    }
+    .card-image {
+        margin-top: 2rem;
+    }
+    .circle {
+        width: 11rem;
+        height: 11rem;
+    }
+    .card-image img {
+        transform: translateZ(100px) rotateZ(-15deg);
+    }
+    .author {
+        width: 100%;
+    }
+    .author img {
+        max-width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+    .card-exerpt {
+        font-size: 14px;
+        margin-top: -20px;
+    }
+    .ballons {
+        right: -0.5rem;
+    }
+}
