@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.square {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 2x #000;
+    height: 16px;
+    width: 16px;
+    margin: 2px;
+    transition: background 2s ease-in-out;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}
