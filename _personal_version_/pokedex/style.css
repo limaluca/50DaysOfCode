@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(138, 170, 221);
+    color: white;
+}
+
+header {
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+header .search {
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: white;
+    font-size: 15px;
+    border-radius: 1rem;
+    transition: background 0.5s ease, outline-offset 0.5s ease;
+}
+
+header .search:focus {
+    background-color: rgb(138, 170, 221);
+    outline-offset: 4px;
+    outline-color: white;
+    outline-style: dotted;
+}
+
+header .search::placeholder {
+    color: white;
+    text-align: center;
+}
+
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pokemon {
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 280px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.pokeball-bg {
+    position: absolute;
+    z-index: -1;
+    top: 32px;
+    left: 12px;
+}
+
+.pokeball {
+    width: 128px;
+    height: 128px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.pokeball.top {
+    border-top: 64px solid rgb(226, 222, 222);
+}
+
+.pokeball.bottom {
+    margin-top: 10px;
+    border-bottom: 64px solid rgb(226, 222, 222);
+}
+
+.middle {
+    position: relative;
+    top: 36px;
+    left: 32px;
+}
+
+.middle .outer {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(138, 170, 221);
+    border-radius: 50%;
+    position: relative;
+    bottom: 8px;
+    left: -8px;
+}
+
+.middle .inner {
+    background-color: rgb(226, 222, 222);
+    width: 60%;
+    height: 60%;
+    top: 16px;
+    left: 16px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.image-container {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.avatar {
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container .name {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        display: flex;
+    }
+    .pokedex {
+        max-width: 400px;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+    }
+    .pokemon {
+        width: 148px;
+        margin: 2px;
+        padding: 4px 8px;
+        justify-content: center;
+        position: relative;
+        text-align: left;
+    }
+    .img-container {
+        position: relative;
+        left: -8px;
+    }
+    .img-container img {
+        width: 80px;
+    }
+    .info-container {
+        font-size: 10px;
+        margin-left: -9px;
+        line-height: 24px;
+    }
+    .info-container .name {
+        font-size: 12px;
+        margin-top: -4px;
+    }
+    .info-container small {
+        font-size: 10px;
+    }
+    .info-container span {
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, 0.3);
+        text-align: center;
+        border-radius: 8px;
+        padding: 2px 4px;
+        margin: 4px 0;
+    }
+    .details,
+    .id {
+        display: none;
+    }
+    .avatar {
+        width: 90px;
+    }
+    .pokeball-bg {
+        position: absolute;
+        z-index: -1;
+        top: 8px;
+        left: 12px;
+    }
+    .pokeball {
+        width: 64px;
+        height: 64px;
+        background-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+    }
+    .pokeball.top {
+        border-top: 32px solid rgb(226, 222, 222);
+    }
+    .pokeball.bottom {
+        margin-top: 10px;
+        border-bottom: 32px solid rgb(226, 222, 222);
+    }
+    .middle {
+        position: relative;
+        left: 20px;
+        top: 24px;
+    }
+    .middle .outer {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .middle .inner {
+        background-color: rgb(226, 222, 222);
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+    }
+}
