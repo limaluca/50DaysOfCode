@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(225, 222, 222);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.subtitle {
+    display: inline-block;
+    margin: 5px 0 20px;
+    opacity: 0.8;
+}
+
+header {
+    background-color: #3e57db;
+    color: white;
+    padding: 20px 30px;
+}
+
+header input {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0;
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+    color: #fff;
+    border-radius: 50px;
+    transition: outline-offset 0.5s ease-in-out;
+}
+
+header input:focus {
+    outline-offset: 4px;
+    outline-color: white;
+    outline-style: dotted;
+}
+
+.user-list {
+    background-color: white;
+    list-style-type: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.user-list li {
+    display: flex;
+    padding: 20px;
+}
+
+.user-list img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.user-list .user-info {
+    margin-left: 10px;
+}
+
+.user-list .user-info h4 {
+    margin: 0 0 10px;
+}
+
+.user-list .user-info p {
+    font-size: 12px;
+}
+
+.user-list li:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.user-list li.hide {
+    display: none;
+}
