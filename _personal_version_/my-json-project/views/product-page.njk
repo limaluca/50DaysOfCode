@@ -1,0 +1,58 @@
+ {% extends "layout.njk" %}
+ 
+  {% block head%}
+<title>Product Page</title>
+{% endblock %} {% block content %}
+<div class="container">
+    <div class="product-images">
+        <div class="main-image">
+            <img src="{{item.image_URL}}" alt="brown-knife" class="main">
+        </div>
+
+        <div class="minor-images">
+            <img src="https://source.unsplash.com/collection/22292654/800x600" alt="" class="minor-image">
+            <img src="https://source.unsplash.com/collection/22292654/600x400" alt="" class="minor-image">
+            <img src="https://source.unsplash.com/collection/22292654/700x600" alt="" class="minor-image">
+        </div>
+    </div>
+
+    <div class="product-information">
+        <h2 class="name"> {{item.title}} </h2>
+        <h4 class="made-by"> <span>by</span> Smith & Wesson</h4>
+        <span class="price">$ {{item.price}}</span>
+        <div class="description">
+            <ul>
+                <p>{{item.exerpt}}</p>
+                <li>Semi-automatic Pistol</li>
+                <li>Internal Hammer Fired</li>
+                <li>Compact</li>
+                <li>9MM</li>
+                <li>3.675 Barrel</li>
+                <li>Polymer Frame</li>
+                <!-- <li>Black Finish</li>
+                    <li>3-Dot Sights</li>
+                    <li>Grip Safety</li>
+                    <li>8Rd</li>
+                    <li>2 Magazines</li> -->
+            </ul>
+        </div>
+
+        <div class="quantity">
+            <input type="text" placeholder="1">
+            <div class="buttons">
+                <button class="increase" id="increase">+</button>
+                <button class="decrease" id="decrease">-</button>
+            </div>
+
+
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+{% endblock %}

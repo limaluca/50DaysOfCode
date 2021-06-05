@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+ <div class="cards-container">
+
+{% for item in items %}
+      <div class="card" id="{{item.id}}">
+            <div class="card-image">
+                <div class="circle"></div>
+                <img class="sneaker" src={{item.image_URL}}>
+            </div>
+            <div class="card-content">
+                <div class="card-info">
+                    <h3 class="title">{{item.title}}</h3>
+                    <p class="card-exerpt">{{item.exerpt}}</p>
+                </div>
+                <div class="author">
+                    <img src="https://thispersondoesnotexist.com/image" alt="a picture of someone that does not exist" class="author-picture">
+                    <div class="author-info">
+                        <strong class="author-name">{{item.author}}</strong>
+                        <small class="date">{{item.date}}</small>
+                    </div>
+                </div>
+            </div>
+      </div>
+{% endfor %}
+</div>
+
+
+{% endblock content %}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" /> {% block head%}
+    <title>Home Page</title>
+
+    {% endblock %}
+
+
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo"><i class="fas fa-barcode"></i>Ammu-Nation</a>
+        <nav>
+            <a href="product-page">Guns</a>
+            <a href="#">Ammunition</a>
+            <a href="#">Optics & Scopes</a>
+            <a href="#">Gun Parts</a>
+            <a href="#">More <i class="fas fa-chevron-down"></i></a>
+        </nav>
+        <input id="search" type="text" placeholder="Search">
+        <!-- <button id="btn"><i class="fas fa-shopping-bag"></i>0</button> -->
+    </header>
+    {% block content%} {% endblock %}
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
