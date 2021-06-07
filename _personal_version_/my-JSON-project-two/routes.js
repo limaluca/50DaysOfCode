@@ -19,11 +19,15 @@ routes.get("/companies/create", (req, res) => {
     res.render("companies/create")
 })
 
+routes.get("/companies/:id", companies.show)
+
 routes.get("/candidates", (req, res) => {
     res.render("candidates")
 })
 
 
 routes.post("/companies", companies.post)
+
+
 
 module.exports = routes;

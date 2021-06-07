@@ -1,0 +1,37 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+      <div class="card">
+            <section class="avatar" style="background: url('{{company.avatar_url}}') no-repeat center center/cover">
+            </section>
+            <section class="details">
+                  <h3>Detalhes</h3>
+                  <div class="item">
+                        <div>Empresa</div>
+                        <div> {{company.company_name}} </div>
+                  </div>
+
+                  <div class="item">
+                        <div>Local</div>
+                        <div>São Luís</div>
+                  </div>
+
+                  <div class="item">
+                        <div>Areas Oferecidas</div>
+                        <div>
+                        {% for field in company.work_field %}
+                              <span>{{field}}</span>
+                        {% endfor %}
+                        </div>
+                  </div>
+                  
+      
+
+                  <div class="item">
+                        <div>Inicio da contrataçao: </div>
+                        <div>01/08/2021</div>
+                  </div>
+
+            </section>
+      </div>
+{% endblock content %}

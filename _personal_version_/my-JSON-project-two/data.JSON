@@ -1,22 +1,32 @@
 {
     "companies": [
         {
-            "avatar_url": "https://www.google.com",
-            "company_name": "AAAA",
-            "local": "aaaaaa",
+            "id": 1,
+            "avatar_url": "http://cdn.1023.clicrbs.com.br/wp-content/uploads/sites/3/2015/02/LadyGaga_Gammy2015_Reprodu%C3%A7%C3%A3o-680x1024.jpg",
+            "company_name": "Valorant ",
+            "local": "Cupertino",
             "type_of_work": "remote",
-            "working_hours": "40",
-            "work_sector": "lutas",
-            "contract_date": "2021-07-05"
+            "working_hours": "20",
+            "hiring_date": 1641340800000
         },
         {
-            "avatar_url": "https://lollyvomito.org",
-            "company_name": "Vomitos",
-            "local": "Sao Pualo",
+            "id": 2,
+            "avatar_url": "http://cdn.1023.clicrbs.com.br/wp-content/uploads/sites/3/2015/02/LadyGaga_Gammy2015_Reprodu%C3%A7%C3%A3o-680x1024.jpg",
+            "company_name": "Valorant ",
+            "local": "Cupertino",
+            "type_of_work": "remote",
+            "working_hours": "20",
+            "hiring_date": 1641340800000
+        },
+        {
+            "id": 3,
+            "avatar_url": "http://cdn.1023.clicrbs.com.br/wp-content/uploads/sites/3/2015/02/LadyGaga_Gammy2015_Reprodu%C3%A7%C3%A3o-680x1024.jpg",
+            "company_name": "lolly vomitos",
+            "local": "aaaaaa",
             "type_of_work": "presential",
-            "working_hours": "15",
-            "work_sector": "Literatura",
-            "contract_date": "1949-01-02"
+            "working_hours": "20",
+            "work_field": "uma,dois, tres",
+            "hiring_date": 754790400000
         }
     ]
 }
