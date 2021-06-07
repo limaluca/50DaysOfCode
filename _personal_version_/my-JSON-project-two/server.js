@@ -4,6 +4,12 @@ const nunjucks = require('nunjucks');
 const routes = require('./routes')
 const server = express();
 
+//*********NEWSSSSSSSSS*********
+// this will enable the express to be able to get
+//the data from the body
+server.use(express.urlencoded({ extended: true }))
+
+
 server.use(express.static("public"))
 
 // getting the express to use the routes

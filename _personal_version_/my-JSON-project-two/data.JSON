@@ -1,0 +1,22 @@
+{
+    "companies": [
+        {
+            "avatar_url": "https://www.google.com",
+            "company_name": "AAAA",
+            "local": "aaaaaa",
+            "type_of_work": "remote",
+            "working_hours": "40",
+            "work_sector": "lutas",
+            "contract_date": "2021-07-05"
+        },
+        {
+            "avatar_url": "https://lollyvomito.org",
+            "company_name": "Vomitos",
+            "local": "Sao Pualo",
+            "type_of_work": "presential",
+            "working_hours": "15",
+            "work_sector": "Literatura",
+            "contract_date": "1949-01-02"
+        }
+    ]
+}
