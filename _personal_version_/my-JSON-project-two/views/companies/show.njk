@@ -15,6 +15,10 @@
                         <div>Local</div>
                         <div>São Luís</div>
                   </div>
+                  <div class="item">
+                        <div>Tipo de trabalho:</div>
+                        <div> {{"Presencial" if company.type_of_work == "presential" else "Remoto"}} </div>
+                  </div>
 
                   <div class="item">
                         <div>Areas Oferecidas</div>
@@ -29,7 +33,7 @@
 
                   <div class="item">
                         <div>Inicio da contrataçao: </div>
-                        <div>01/08/2021</div>
+                        <div>{{company.hiring_date}}</div>
                   </div>
 
             </section>

@@ -4,6 +4,7 @@
 //This will enable to use files including JSON
 const fileSystem = require('fs');
 const data = require('./data.json');
+const { getHiringDate } = require('./utils')
 
 exports.show = (req, res) => {
     const { id } = req.params;
@@ -16,15 +17,20 @@ exports.show = (req, res) => {
         return res.send("company not found")
     }
 
+
+
+
+
+
+
     //*********NEWSSSSSSSSS*********
     // Using spread operator to handle the data before sending it to the front-end
     // I need to put the data there...
     const company = {
         ...foundCompany,
-        type_of_work: "",
+        hiring_date: new Intl.DateTimeFormat("br-pt").format(foundCompany.hiring_date), //ou usar a funcao getHiringDate
         working_hours: "",
         work_field: foundCompany.work_field.split(","),
-        hiring_date: ""
     }
 
     return res.render("companies/show", { company })

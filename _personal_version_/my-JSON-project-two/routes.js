@@ -19,6 +19,10 @@ routes.get("/companies/create", (req, res) => {
     res.render("companies/create")
 })
 
+routes.get("/companies/:id/edit", (req, res) => {
+    res.render("companies/edit")
+})
+
 routes.get("/companies/:id", companies.show)
 
 routes.get("/candidates", (req, res) => {

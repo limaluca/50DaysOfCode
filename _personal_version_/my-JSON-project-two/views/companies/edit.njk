@@ -1,0 +1,63 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+      <form class="card" method="POST" action="/companies">
+            <section class="avatar" style="background: url('https://source.unsplash.com/collection/10647885/600x400') no-repeat center center/cover">
+            </section>
+            <section class="details">
+                  <h3>Editar dados da empresa</h3>
+                  <div class="item">
+                        <div>Avatar da empresa</div>
+                        <div><input type="url" name="avatar_url" value="{{company.avatar_url}}"></div>
+                  </div>
+                  <div class="item">
+                        <div>Nome da empresa</div>
+                        <div><input type="text" name="company_name"></div>
+                  </div>
+
+                  <div class="item">
+                        <div>Cidade da vaga</div>
+                        <div>
+                              <input type="text" name="local">
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div>Tipo de trabalho</div>
+                        <div>
+                              <span><input type="radio" name="type_of_work" value="presential"><label for="presential">Presencial</label></span>
+
+                              <span><input type="radio" name="type_of_work" value="remote"><label for="presential">Remoto</label></span>
+                        </div>
+                  </div>
+
+                  <div class="item">
+                        <div>Carga Horária</div>
+                        <div>
+                                <select name="working_hours">
+                                          <option value="15">15</option>
+                                          <option value="20">20</option>             
+                                          <option value="30">30</option>
+                                          <option value="40">40</option>
+                              </select>
+                        </div>
+                  </div>
+
+                  <div class="item">
+                        <div>Areas Oferecidas</div>
+                        <div>
+                             <input type="text" name="work_field">
+                        </div>
+                  </div>
+                  
+      
+
+                  <div class="item">
+                        <div>Inicio da contrataçao: </div>
+                        <div>
+                              <input type="date" name="contract_date">
+                        </div>
+                  </div>
+                  <button action="submit">BUTAO</button>
+            </section>
+      </form>
+{% endblock content %}

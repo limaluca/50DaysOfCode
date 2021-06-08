@@ -1,12 +1,12 @@
 {
-    "companies": [
-        {
+    "companies": [{
             "id": 1,
             "avatar_url": "http://cdn.1023.clicrbs.com.br/wp-content/uploads/sites/3/2015/02/LadyGaga_Gammy2015_Reprodu%C3%A7%C3%A3o-680x1024.jpg",
             "company_name": "Valorant ",
             "local": "Cupertino",
             "type_of_work": "remote",
             "working_hours": "20",
+            "work_field": "Programming,dois, tres",
             "hiring_date": 1641340800000
         },
         {
@@ -16,6 +16,7 @@
             "local": "Cupertino",
             "type_of_work": "remote",
             "working_hours": "20",
+            "work_field": "uma,dois, tres",
             "hiring_date": 1641340800000
         },
         {
