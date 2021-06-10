@@ -3,9 +3,11 @@ const minorImages = document.querySelectorAll(".minor-image")
 const quantityInput = document.querySelector(".quantity input")
 const increaseBtn = document.getElementById("increase")
 const decreaseBtn = document.getElementById("decrease")
+const cartButton = document.querySelector(".add-to-cart")
+const productPage = document.querySelector(".product-page")
+const shopCart = document.querySelector(".shop-cart")
 const cards = document.querySelectorAll(".card")
 let quantity = 1;
-
 
 
 
@@ -34,4 +36,18 @@ decreaseBtn.addEventListener("click", () => {
         quantity = 1;
     }
     quantityInput.value = quantity
+})
+
+cartButton.addEventListener("click", () => {
+    if (productPage.classList.contains("active")) {
+        productPage.classList.remove("active")
+        shopCart.style.visibility = "hidden"
+
+
+    } else {
+        productPage.classList.add("active")
+        shopCart.style.visibility = "visible"
+
+    }
+
 })

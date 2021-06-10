@@ -6,12 +6,13 @@
  }
  
  :root {
-     --primary-color: rgba(0, 0, 0, 0.2)
+     --primary-color: #E2808A;
+     --secondary-color: #638c80;
  }
  
  body {
      padding: 0 2rem;
-     background-color: #434441;
+     background-color: var(--secondary-color);
      font-family: 'Roboto Mono', sans-serif;
      display: flex;
      align-items: center;
@@ -23,16 +24,32 @@
      display: flex;
      width: 1000px;
      padding: 32px 16px;
-     background-color: #6C6A61;
+     background-color: whitesmoke;
+     color: white;
+     border-radius: 20px;
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+     margin-bottom: 16px;
  }
  
  header .logo {
-     width: 240px;
-     color: hsl(11, 20%, 16%);
+     width: 500px;
+     color: #638c80;
      font-size: 20px;
      font-weight: bold;
      cursor: pointer;
      text-decoration: none;
+ }
+ 
+ .logo i {
+     color: var(--primary-color);
+     margin-right: 8px;
+     transition: transform 0.2s ease-in-out;
+ }
+ 
+ .logo:hover i {
+     color: var(--secondary-color);
+     transform: scale(1.3);
  }
  
  header nav {
@@ -46,13 +63,13 @@
  header nav a {
      text-align: center;
      text-decoration: none;
-     color: #373835;
+     color: var(--secondary-color);
      font-weight: 500;
      transition: color .3s ease-in-out, transform 0.2s ease-in-out;
  }
  
  header nav a:hover {
-     color: #302320;
+     color: var(--primary-color);
      transform: scale(1.09);
  }
  
@@ -60,7 +77,9 @@
      border: 1px solid #373835;
      padding: 8px 8px;
      background-color: transparent;
-     color: #373835;
+     color: var(--secondary-color);
+     transition: outline-offset 0.5s ease-in-out;
+     border-radius: 20px;
  }
  
  header input:placeholder-shown {
@@ -68,21 +87,68 @@
  }
  
  header input:focus {
-     outline-offset: 2px;
+     outline-offset: 4px;
      outline-style: dashed;
+     outline-color: var(--primary-color);
  }
  
  .container {
      display: flex;
      justify-content: center;
-     background-color: #6C6A61;
+     background-color: whitesmoke;
      overflow: hidden;
      padding: 16px 32px;
      width: 1000px;
-     height: 600px;
-     border-radius: 4px;
+     height: 590px;
+     border-radius: 20px;
      overflow: hidden;
      padding: 16px;
+ }
+ 
+ .container.active {
+     transform: translateX(-120px);
+ }
+ 
+ .add-to-cart.hidden {
+     visibility: hidden;
+ }
+ 
+ .shop-cart {
+     visibility: hidden;
+     position: absolute;
+     right: 20px;
+     top: 160px;
+     width: 220px;
+     height: 500px;
+     background-color: whitesmoke;
+     border-radius: 20px;
+     margin: 0 auto;
+     overflow: hidden;
+ }
+ 
+ .fa-cart-plus {
+     position: absolute;
+     left: 40%;
+     font-size: 40px;
+     top: 8px;
+     color: var(--primary-color);
+ }
+ 
+ .items {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     width: 100%;
+ }
+ 
+ .item {
+     margin: 64px 0;
+     background-color: whitesmoke;
+     border: 2px dotted var(--secondary-color);
+     width: 95%;
+     text-align: center;
+     border-radius: 20px;
  }
  
  .product-images {
@@ -101,7 +167,7 @@
  }
  
  .main-image img {
-     object-fit: cover;
+     object-fit: contain;
      width: 500px;
      height: 400px;
      border-radius: 4px;
@@ -118,7 +184,7 @@
  
  .minor-images img {
      width: 150px;
-     object-fit: cover center center;
+     object-fit: contain;
      border-radius: 4px;
      overflow: hidden;
      height: 120px;
@@ -173,7 +239,7 @@
      justify-content: center;
  }
  
- .product-information input {
+ .quantity input {
      background-color: transparent;
      border: 1px solid #302320;
      padding: 8px 16px;
@@ -183,7 +249,7 @@
      height: 40px;
      font-size: 16px;
      margin: 0 4px;
-     color: white;
+     color: var(--secondary-color);
  }
  
  .buttons {
@@ -202,11 +268,15 @@
  }
  
  .quantity .buttons button:hover {
-     background-color: #6b392e;
+     background-color: var(--primary-color);
+ }
+ 
+ .quantity .buttons button:active {
+     transform: scale(0.7);
  }
  
  .quantity .add-to-cart {
-     background-color: #6b392e;
+     background-color: var(--primary-color);
      border: none;
      padding: 16px 32px;
      border-radius: 4px;
@@ -221,6 +291,14 @@
  .quantity .add-to-cart:hover {
      background-color: #497550;
  }
+ 
+ .quantity .add-to-cart:active {
+     transform: scale(0.9);
+ }
+ 
+ .product-page {
+     margin-bottom: 20px;
+ }
  /* Cards */
  
  .cards-container {
@@ -229,31 +307,40 @@
      align-items: center;
      justify-content: center;
      width: 1200px;
-     margin: 32px 16px;
-     background-color: #6C6A61;
+     min-height: 100vh;
+     margin: 0 16px;
+     background-color: var(--secondary-color);
+     border-radius: 20px;
  }
  
  .card {
      display: flex;
      flex-direction: column;
      width: 22rem;
-     min-height: 30rem;
+     height: 32rem;
      box-shadow: var(--shadow), 0 0 50px rgba(0, 0, 0, 0.3);
      border-radius: 20px;
      background-color: whitesmoke;
-     transform-style: preserve-3d;
      margin: 8px 16px;
+     border: 8px solid #e2808a71;
+     transition: border-color 200ms ease-in, transform 50ms ease-in;
+ }
+ 
+ .card:hover {
+     border-color: var(--primary-color);
+     transform: scale(1.008);
  }
  
  .card-image {
-     min-height: 35vh;
+     height: 35vh;
      display: flex;
      align-items: center;
      justify-content: center;
  }
  
  .card-image img {
-     width: 20rem;
+     object-fit: contain;
+     width: 15rem;
      z-index: 2;
      transition: transform 0.4s ease-in-out;
  }
@@ -261,21 +348,26 @@
  .circle {
      width: 14rem;
      height: 14rem;
-     background-image: linear-gradient(to right, rgba(255, 72, 0, 0.883), rgba(219, 19, 19, 0.801));
+     background-image: linear-gradient(to right, rgba(255, 139, 164, 0.883), rgba(207, 77, 110, 0.801));
      border-radius: 50%;
      position: absolute;
      z-index: 1;
  }
  
  .card-content {
-     margin-top: 1.5rem;
      padding: 1.5rem;
+ }
+ 
+ .card-exerpt {
+     font-size: 13px;
  }
  
  .author {
      width: 50%;
      display: flex;
      padding: 0.5rem;
+     bottom: 0;
+     position: relative;
  }
  
  .author img {
@@ -292,6 +384,7 @@
  
  .author-info strong {
      font-size: 14px;
+     width: 200px;
  }
  
  .author-info small {

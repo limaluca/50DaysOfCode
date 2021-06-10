@@ -3,38 +3,26 @@
   {% block head%}
 <title>Product Page</title>
 {% endblock %} {% block content %}
-<div class="container">
+<div class="container product-page">
     <div class="product-images">
         <div class="main-image">
             <img src="{{item.image_URL}}" alt="brown-knife" class="main">
         </div>
 
         <div class="minor-images">
-            <img src="https://source.unsplash.com/collection/22292654/800x600" alt="" class="minor-image">
-            <img src="https://source.unsplash.com/collection/22292654/600x400" alt="" class="minor-image">
-            <img src="https://source.unsplash.com/collection/22292654/700x600" alt="" class="minor-image">
+            <img src="{{item.image_URL}}" alt="" class="minor-image">
+            <img src="{{item.secondImage}}" alt="" class="minor-image">
+            <img src="{{item.thirdImage}}" alt="" class="minor-image">
         </div>
     </div>
 
     <div class="product-information">
         <h2 class="name"> {{item.title}} </h2>
-        <h4 class="made-by"> <span>by</span> Smith & Wesson</h4>
+        <h4 class="made-by"> <span>by</span> {{item.supplier}}</h4>
         <span class="price">$ {{item.price}}</span>
         <div class="description">
             <ul>
                 <p>{{item.exerpt}}</p>
-                <li>Semi-automatic Pistol</li>
-                <li>Internal Hammer Fired</li>
-                <li>Compact</li>
-                <li>9MM</li>
-                <li>3.675 Barrel</li>
-                <li>Polymer Frame</li>
-                <!-- <li>Black Finish</li>
-                    <li>3-Dot Sights</li>
-                    <li>Grip Safety</li>
-                    <li>8Rd</li>
-                    <li>2 Magazines</li> -->
-            </ul>
         </div>
 
         <div class="quantity">
@@ -52,7 +40,16 @@
 
 
     </div>
+</div>
+<div class="shop-cart">
+    <i class="fas fa-cart-plus"></i>    
+    <div class="items">
 
+        <div class="item">
+            <div>{{item.title}} </div>
+            <div><span>{{item.price}}</span></div>
+            <div> {{item.supplier}} </div>
+        </div>
 </div>
 
 {% endblock %}

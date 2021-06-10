@@ -2,8 +2,9 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const { forEach } = require('./data');
-const products = require('./data')
 const server = express();
+const products = require('./data')
+
 
 //Setting up other files of the project, like the styles
 server.use(express.static("public"))
@@ -42,6 +43,7 @@ server.get("/product", (req, res) => {
     if (!product) {
         return res.send("not found")
     }
+
 
     return res.render("product-page", { item: product })
 
